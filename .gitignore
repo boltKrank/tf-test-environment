@@ -1,6 +1,0 @@
-/terraform.tfvars.json
-*.tfvars.json
-*.json
-*.hcl
-.terraform
-terraform.tfvars.json
