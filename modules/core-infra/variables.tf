@@ -29,3 +29,21 @@ variable "org_id" {
     description = "The ID of the organisation"
     type = string  
 }
+
+variable "project_apis" {
+  description = "List of APIs to enable."
+  type        = list(string)
+
+  default = [
+    "cloudkms.googleapis.com",
+    "servicenetworking.googleapis.com",
+    "compute.googleapis.com",
+    "logging.googleapis.com",
+    "serviceusage.googleapis.com",
+    "cloudresourcemanager.googleapis.com",
+    "cloudbilling.googleapis.com",
+    "dns.googleapis.com",
+    "iam.googleapis.com",
+    "admin.googleapis.com",
+  ]
+}
