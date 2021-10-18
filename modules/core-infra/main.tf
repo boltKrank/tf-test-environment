@@ -8,10 +8,13 @@ terraform {
   required_version = ">= 0.12.0"
 }
 
-module "core-infra" {
-  source               = "./modules/core-infra"
-  org_id = var.org_id
-  project_name = var.project_name
+data "google_organization" "org" {
+    organization = var.org_id  
+}
+
+resource "google_project" "demo_environment" {
+  name = var.project_name
   project_id = var.project_id
+  org_id = var.org_id
   billing_account = var.billing_account
 }
