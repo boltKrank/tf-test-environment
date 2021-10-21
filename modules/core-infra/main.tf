@@ -26,3 +26,5 @@ resource "google_project_service" "project_api" {
   disable_dependent_services = true
   depends_on                 = [google_project.demo_environment]
 }
+
+#TODO: VPC
