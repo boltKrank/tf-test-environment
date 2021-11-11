@@ -27,4 +27,8 @@ resource "google_project_service" "project_api" {
   depends_on                 = [google_project.demo_environment]
 }
 
-#TODO: VPC
+#TODO: VPC (move data to variables)
+#resource "google_compute_network" "vpc_network" {
+#  name = "puppet-network"
+#  auto_create_subnetworks = true  
+#}

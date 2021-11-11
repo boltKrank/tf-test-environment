@@ -22,7 +22,7 @@ module "core-infra" {
 }
 
 #TODO "Puppet master"
-module "core-infra" {
+module "puppet-server" {
   source = "./modules/puppet-server"
 }
 
